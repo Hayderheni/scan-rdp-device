@@ -1,5 +1,6 @@
 from shodan import Shodan
 import pymysql
+import os, datetime
 
 
 # API_KEY = 17VYuBdMTySxjVzyJtgsOjDtxH8WM0pD
@@ -19,7 +20,6 @@ class get_results():
             f['longitude'] = result['location']['longitude']
             f['country'] = result['location']['country_name']
             f['latitude'] = result['location']['latitude']
-            f['timestamp'] = result['timestamp']
             f['org'] = result['org']
             f['data'] = result['data']
             f['transport'] = result['transport']
